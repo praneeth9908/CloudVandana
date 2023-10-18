@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="/home/pran/cloudvandana/HTML/SurveyForm/survey.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Survey Form</h1>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" placeholder="Eg. Praneeth" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" placeholder="Eg. Vankadari" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="date-of-birth">Date of Birth:</label>
+                <input type="date" id="date-of-birth" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" required>
+                    <option value="">Select a country</option>
+                    <!-- Add country options here -->
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender">
+                    <div class="gender-option"><input type="checkbox" id="male" name="gender"> <label for="male">Male</label></div>
+                    <div class="gender-option"><input type="checkbox" id="female" name="gender"> <label for="female">Female</label></div>
+                    <div class="gender-option"><input type="checkbox" id="other" name="gender"> <label for="other">Other</label></div>
+                </div>
+                
+            </div>
+            
+            <div class="form-group">
+                <label for="profession">Profession:</label>
+                <input type="text" id="profession" placeholder="Eg. Student" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Eg. xyz@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile-number">Mobile Number:</label>
+                <input type="tel" id="mobile-number" placeholder="Eg. 93XXXXXX39" required>
+            </div>
+            
+            <div class="buttons">
+                <button type="button" onclick="submitForm()">Submit</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </div>
+            
+        </form>
+    </div>
+    <div id="popup" class="popup">
+        <h2>Selected Values</h2>
+        <ul id="selected-values"></ul>
+        <button type="button" onclick="closePopup()">Close</button>
+    </div>
+    <script src="/home/pran/cloudvandana/HTML/SurveyForm/countries.js"></script>
+</body>
+</html>
